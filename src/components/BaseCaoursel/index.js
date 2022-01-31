@@ -12,9 +12,8 @@ const Slide = styled.div`
 const BaseCarousel = () => {
         return (
             <Wrapper>
-                <Slide>
-
-                </Slide>
+                <Slide/>
+                {/*    TODO Base Carousel implemention*/}
             </Wrapper>
         );
     }
