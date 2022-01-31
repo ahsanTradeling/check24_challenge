@@ -23,8 +23,8 @@ const Compare = () => {
                     Heading
                 </Heading>
                 <ItemWrapper>
-                    {data.map(() => {
-                        return <CompareItem/>
+                    {data.map((item,index) => {
+                        return <CompareItem {...item} key={item.name + index}/>
                     })}
                 </ItemWrapper>
             </Wrapper>
