@@ -7,22 +7,17 @@ import CarouselProvider from "../context/carouselContext";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  background-image: url(" ${process.env.PUBLIC_URL} bg_dirt.jpg");
+
 `;
 
-const Container = styled.div`
-  width: 1024px;
-`;
 
 export default () => {
     const data = [slide1,slide2,slide3];
     return (
         <Wrapper>
-            <Container>
                 <CarouselProvider>
                     <BaseCarousel data={data}/>
                 </CarouselProvider>
-            </Container>
         </Wrapper>
     )
 }

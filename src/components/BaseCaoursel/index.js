@@ -44,7 +44,6 @@ const BaseCarousel = ({data}) => {
     }, [carouselRef]);
 
         return (
-
                 <Wrapper>
                     <Slide position={position} ref={carouselRef}>
                         {data.map((img, i) => (
