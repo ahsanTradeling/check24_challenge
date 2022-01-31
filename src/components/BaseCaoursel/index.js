@@ -46,7 +46,7 @@ const BaseCarousel = ({data}) => {
         return (
                 <Wrapper>
                     <Slide position={position} ref={carouselRef}>
-                        {data.map((img, i) => (
+                        {data && data.map((img, i) => (
                             <Image src={img}  key={i}  alt={''}/>
                         ))}
                     </Slide>
