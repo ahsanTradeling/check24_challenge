@@ -1,20 +1,20 @@
 import React, {useContext, useEffect, useRef} from 'react';
 import styled from 'styled-components';
-import {CarouselContext, CarouselProvider} from "../../context/carouselContext";
+import {CarouselContext} from "../../context/carouselContext";
 import Controls from "./components/controlls";
-
 
 const Wrapper = styled.div`
   position: relative;
-  width: 55%;
+  width: 100%;
   overflow: hidden;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
 `;
 
 const Slide = styled.div`
   display: flex;
+  flex-flow: wrap;
+  flex-direction: column;
   width: 100%;
-  height: 450px;
+  height: 500px;
   transition: transform 0.6s ease-in-out;
   transform: ${props => `translateX(${props.position}px)`};
 `;
@@ -29,7 +29,8 @@ const BaseCarousel = ({data}) => {
     const {setContext,...state} = useContext(CarouselContext);
     const {position} = state;
     const carouselRef = useRef();
-    console.log(useContext(CarouselContext))
+
+
     useEffect(() => {
         if (carouselRef.current) {
             const width = carouselRef.current.clientWidth;
